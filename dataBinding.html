@@ -6,12 +6,22 @@
     <title>Data Binding</title>
 </head>
 <body>
+    <h1 style="color: red;">Data Binding</h1>
     
     <div id="root">
-        <p>Enter Your Name: {{name}}</p>
+        <p>Enter Your Name: </p>
         <input type="text" v-model="name">
+        <p>Enter Your Email: </p>
+        <input type="email" v-model="email">
+        <p>Enter Your Phone no: </p>
+        <input type="number" v-model="phone">
         <h1>Your name is: {{name}} </h1>
+        <h1>Your email is: {{email}} </h1>
+        <h1>Your phone no is: {{phone}} </h1>
     </div>
+    <br>
+
+    <div id="test">{{tst}}</div>
 
     <script src="src/js/vue.js"></script>
 
@@ -20,7 +30,19 @@
         var app = new Vue({
             el: '#root',
             data:{
-                name: ''
+                name: '',
+                email: '',
+                phone: ''
+            }
+
+        })
+
+        var app2 = new Vue({
+            
+
+            el: '#test',
+            data: {
+                tst: 'hello'
             }
         })
     </script>
