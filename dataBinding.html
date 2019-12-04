@@ -3,21 +3,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intro</title>
+    <title>Data Binding</title>
 </head>
 <body>
-
-    <div id="vueTest">
-            {{msg}}
-    </div>
     
+    <div id="root">
+        <p>Enter Your Name: {{name}}</p>
+        <input type="text" v-model="name">
+        <h1>Your name is: {{name}} </h1>
+    </div>
+
     <script src="src/js/vue.js"></script>
 
     <script>
-        new Vue({
-            el:'#vueTest',
+
+        var app = new Vue({
+            el: '#root',
             data:{
-                msg:'hello',
+                name: ''
             }
         })
     </script>
