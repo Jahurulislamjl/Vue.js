@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attribute&Data Bind</title>
+
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline;
+        }
+
+        .active{
+            background: rgb(80, 80, 235);
+            color: #ffffff;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                <a :class="{'active': activelink == 'link1'}" :href="link1.url" :title="link1.title">{{link1.text}}</a>
+            </li>
+            <li>
+                <a :href="link2.url" :title="link2.title">{{link2.text}}</a>
+            </li>
+        </ul>
+        <br><br><br>
+        <p v-html="html"></p>
+    </div>
+    <script src="src/js/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data:{
+                link1:{
+                    text:"Facebook", title:"Go to facebook", url:"http://facebook.com"
+                },
+
+                link2:{
+                    text:"Youtube", title:"Go to youtube", url: "http://youtube.com"
+                },
+
+                activelink:"link1",
+
+                html: '<a href="http://facebook.com">About me</a>'
+            }
+        })
+    </script>
+</body>
+</html>
