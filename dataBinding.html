@@ -15,9 +15,26 @@
         <input type="email" v-model="email">
         <p>Enter Your Phone no: </p>
         <input type="number" v-model="phone">
-        <h1>Your name is: {{name}} </h1>
-        <h1>Your email is: {{email}} </h1>
-        <h1>Your phone no is: {{phone}} </h1> 
+        <button @click.prevent="submit">Submit</button>
+        <div v-if="submitt">
+                <h1>Your name is: {{name}} </h1>
+                <h1>Your email is: {{email}} </h1>
+                <h1>Your phone no is: {{phone}} </h1>
+        </div>
+
+        <div v-for="(item,index) in fruit" :style="mnff">
+            <P>{{index+1+'. '+item}}</P>
+        </div>
+        <button @click="add('Guyava')">Add</button>
+        <button @click="remove">Remove</button>
+        <table>
+            <tr v-for="i in people">
+                <td>{{i.id[0].g}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+         </tr>
+        </table>
+
     </div>
     <br>
 
@@ -31,8 +48,37 @@
             el: '#app',
             data:{
                 name: '',
+                mnff:'display:block',
                 email: '',
-                phone: ''
+                phone: '',
+                submitt:false,
+
+                fruit: ['mango', 'apple', 'licchi', 'mango'],
+                people: [
+                    {id:[
+                            {g:'ghf',h:'jgjj'},
+                            {g:'ghf',h:'jgjj'}
+                        ], name:'tuty', age:23},
+
+                ]
+                
+            },
+            methods:{
+                submit(){
+                    this.submitt=true;
+                },
+
+                add(item){
+                    this.fruit.push(item)
+                },
+
+                remove(){
+                    //this.fruit.splice(this.fruit.indexOf(item),1)
+                    //this.fruit.splice(this.fruit.indexOf('mango'),2)
+
+                    this.fruit=this.fruit.filter(d=>d != 'mango')
+                    
+                }
             }
         })
 
