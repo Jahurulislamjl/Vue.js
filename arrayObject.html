@@ -17,9 +17,12 @@
         <h2>Skills</h2> <hr>
         <ul>
             <li v-for="(skill, i) in skills">
-                {{i+1}}. {{skill.name}} ({{skill.expreance}})
+                <!-- {{i+1}}. {{skill.name}} ({{skill.expreance}}) -->
+                {{(i+1)+'.'+skill.name+'('+(skill.expreance)+')'}}
             </li>
         </ul>
+
+        <button @click="add()">Add</button>
     </div>
     
     <script src="src/js/vue.js"></script>
@@ -33,7 +36,12 @@
                     {name:"Bootstrap", expreance: 4},
                     {name:"php", expreance: 2},
                     {name:"Java", expreance: 1}
-                    ]
+                ]
+            },
+            methods:{
+                add(){
+                    this.skills.push({name:"C#", expreance: 1})
+                }
             }
         })
     </script>
