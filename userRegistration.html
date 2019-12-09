@@ -14,31 +14,51 @@
         <div class="container">
             <form class="form-control">
                 <h1>User Info</h1>
-                <input type="text" v-model="name" class="form-control mt-2" placeholder="Name">
-                <input type="email" v-model="email" class="form-control mt-2" placeholder="Email">
-                <input type="text" v-model="password" class="form-control mt-2" placeholder="Password">
-                <input type="number" v-model="phoneno" class="form-control mt-2" placeholder="Phone no">
+                <input type="text" v-model="userdata.name" class="form-control mt-2" placeholder="Name">
+                <input type="text" v-model="userdata.email" class="form-control mt-2" placeholder="Email">
+                <input type="text" v-model="userdata.password" class="form-control mt-2" placeholder="Password">
+                <input type="text" v-model="userdata.phoneno" class="form-control mt-2" placeholder="Phone no">
 
-                <select v-model="selected" class="form-control mt-2">
-                      <option value="">Select Gender</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Others</option>
-                </select>
-
-                <textarea v-model="address" class="form-control mt-2" placeholder="Address"></textarea>
-                <button @click="submit()" class="btn btn-success my-2">Submit</button>
+                <textarea v-model="userdata.address" class="form-control mt-2" placeholder="Address"></textarea>
+                <button v-if="submitbtn" @click.prevent="submit()" class="btn btn-success my-2">Submit</button>
+                <button v-if="!submitbtn" @click.prevent="updateinfo()" class="btn btn-success my-2">Update</button>
             </form>
         </div>
-        <div class="table">
-            <table>
-                <tr v-for="(info, i) in arrayInfo">{{info}}</tr>
+        <div >
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Phone No</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                <tr v-for="(item,i) in arrayInfo">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.password}}</td>
+                    <td>{{item.phoneno}}</td>
+                    <td>{{item.address}}</td>
+                    <td>
+                        <button @click="editUser(i)" class="btn btn-warning">Edit</button>
+                        <button @click="deleteUser(i)" class="btn btn-success">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
             </table>
         </div>
     </div>
 
-    <script src="src/js/bootstrap.min.js"></script>
     <script src="src/js/vue.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="src/js/popper.min.js"></script>
+    <script src="src/js/jquery-slim.min.js"></script>
+
 
     <script>
         new Vue({
@@ -46,21 +66,36 @@
             el:'#app',
 
             data:{
-                name: '',
-                email: '',
-                password: '',
-                phoneno: '',
-                selected: '',
-                address: '',
+                userdata:{},
 
-                arrayInfo: []
+                arrayInfo: [],
+
+                submitbtn:true,
+
+                updateData:''
             },
 
             methods:{
                 submit(){
-                //var userinfo= this.name+this.email+this.password+this.phoneno+this.selected+this.address;
+                    this.arrayInfo.push(this.userdata)
+                    this.userdata={}
+                },
 
-                this.arrayInfo.push(this.name)
+                editUser(i){
+                    this.updateData= i,
+                    this.userdata = this.arrayInfo[i],
+                    this.submitbtn=false
+                },
+
+                deleteUser(i){
+                    this.arrayInfo.splice(i,1)
+                },
+
+                updateinfo(){
+                    this.$set(this.arrayInfo,this.updateData,this.userdata)
+                    this.userdata ={}
+                    this.submitbtn=true
+
                 }
             }
         })
