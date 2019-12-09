@@ -30,6 +30,11 @@
                 <button @click="submit()" class="btn btn-success my-2">Submit</button>
             </form>
         </div>
+        <div class="table">
+            <table>
+                <tr v-for="(info, i) in arrayInfo">{{info}}</tr>
+            </table>
+        </div>
     </div>
 
     <script src="src/js/bootstrap.min.js"></script>
@@ -48,7 +53,15 @@
                 selected: '',
                 address: '',
 
-                arrayInfo
+                arrayInfo: []
+            },
+
+            methods:{
+                submit(){
+                //var userinfo= this.name+this.email+this.password+this.phoneno+this.selected+this.address;
+
+                this.arrayInfo.push(this.name)
+                }
             }
         })
 
