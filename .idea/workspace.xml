@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453af406-e1d7-4bda-ae5a-fdd4a5b5332a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/formStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userRegistration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arrayObject.html" beforeDir="false" afterPath="$PROJECT_DIR$/arrayObject.html" afterDir="false" />
     </list>
@@ -27,11 +29,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrayObject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="103" column="55" lean-forward="true" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+            <state relative-caret-position="262">
+              <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userRegistration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -46,6 +66,8 @@
       <list>
         <option value="$PROJECT_DIR$/dataBinding.html" />
         <option value="$PROJECT_DIR$/arrayObject.html" />
+        <option value="$PROJECT_DIR$/formStyle.css" />
+        <option value="$PROJECT_DIR$/userRegistration.html" />
       </list>
     </option>
   </component>
@@ -54,7 +76,9 @@
     <option name="width" value="787" />
     <option name="height" value="735" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -92,15 +116,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.arrayObject.html">
+  <component name="RunManager" selected="JavaScript Debug.userRegistration.html">
     <configuration name="arrayObject.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue.js/arrayObject.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="dataBinding.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue.js/dataBinding.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="userRegistration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue.js/userRegistration.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.userRegistration.html" />
         <item itemvalue="JavaScript Debug.arrayObject.html" />
         <item itemvalue="JavaScript Debug.dataBinding.html" />
       </list>
@@ -117,18 +145,25 @@
       <option name="presentableId" value="Default" />
       <updated>1575451056486</updated>
       <workItem from="1575451080883" duration="3402000" />
-      <workItem from="1575783796175" duration="10554000" />
+      <workItem from="1575783796175" duration="16317000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1575797939326</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575797939326</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13956000" />
+    <option name="totallyTimeSpent" value="19719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -154,6 +189,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/attribute&amp;dataBind.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -167,8 +206,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arrayObject.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="103" column="55" lean-forward="true" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+        <state relative-caret-position="262">
+          <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userRegistration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
         </state>
       </provider>
     </entry>
