@@ -18,7 +18,12 @@
                 <input type="text" v-model="userdata.email" class="form-control mt-2" placeholder="Email">
                 <input type="text" v-model="userdata.password" class="form-control mt-2" placeholder="Password">
                 <input type="text" v-model="userdata.phoneno" class="form-control mt-2" placeholder="Phone no">
-
+                <select v-model="userdata.gender">
+                    <option value="">Select Gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Others</option>
+                </select>
                 <textarea v-model="userdata.address" class="form-control mt-2" placeholder="Address"></textarea>
                 <button v-if="submitbtn" @click.prevent="submit()" class="btn btn-success my-2">Submit</button>
                 <button v-if="!submitbtn" @click.prevent="updateinfo()" class="btn btn-success my-2">Update</button>
