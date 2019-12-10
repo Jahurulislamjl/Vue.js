@@ -18,11 +18,11 @@
                 <input type="text" v-model="userdata.email" class="form-control mt-2" placeholder="Email">
                 <input type="text" v-model="userdata.password" class="form-control mt-2" placeholder="Password">
                 <input type="text" v-model="userdata.phoneno" class="form-control mt-2" placeholder="Phone no">
-                <select v-model="userdata.gender">
+                <select v-model="userdata.gender" class="form-control mt-2">
                     <option value="">Select Gender</option>
-                    <option value="">Male</option>
-                    <option value="">Female</option>
-                    <option value="">Others</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
                 </select>
                 <textarea v-model="userdata.address" class="form-control mt-2" placeholder="Address"></textarea>
                 <button v-if="submitbtn" @click.prevent="submit()" class="btn btn-success my-2">Submit</button>
@@ -37,7 +37,8 @@
                         <th>Email</th>
                         <th>Password</th>
                         <th>Phone No</th>
-                        <th>Address</th>
+                        <th>Gender</th>
+                        <th>Address</th> 
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -48,6 +49,7 @@
                     <td>{{item.email}}</td>
                     <td>{{item.password}}</td>
                     <td>{{item.phoneno}}</td>
+                    <td>{{item.gender}}</td>
                     <td>{{item.address}}</td>
                     <td>
                         <button @click="editUser(i)" class="btn btn-warning">Edit</button>
